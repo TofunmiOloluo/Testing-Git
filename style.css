@@ -1,0 +1,218 @@
+/*Basic Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+.container {
+    background-color: white;
+    border-radius: 5px;
+    width: 100px;
+    max-width: 800px;
+    min-width: 400px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+   /*Screens*/
+   .screen {
+    display: none;
+    padding: 20px;
+    text-align: center;
+   }
+   .screen.active {
+    display: block;
+   }
+
+
+
+   /* START SCREEN */
+   #start-screen h1 {
+    color: rgb(223, 94, 24);
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: bolder;
+   }
+   #start-screen p{
+    color: gray;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: lighter;
+   }
+
+
+
+   /* Question Screen */
+   .quiz-header{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 12px;
+   }
+   #question-text {
+    color: rgb(2, 2, 28);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+   }
+   .quiz-info {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(27, 24, 24);
+    font-size: smaller;
+    margin-bottom: 10px;
+    margin-top: 20px;
+   }
+   .answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    border: grey;
+    border-radius: 7px;
+    background-color: antiquewhite;
+    font-size: 12px;
+    height: 35px;
+    align-items: start;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: medium;
+    transition: all 0.5s ease;
+    cursor: pointer;
+   }
+   .answers-container:hover {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    border: grey;
+    border-radius: 7px;
+    background-color: brown;
+    font-size: 12px;
+    height: 35px;
+    align-items: start;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: medium;
+    color: white;
+   }
+   .answer-btn {
+    background-color: rgb(223, 94, 24);
+    color:rgb(25, 25, 25) ;
+    border:2px solid gray ;
+    border-radius:10px ;
+    padding: 20px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+   }
+   .answer-btn:hover {
+    background-color: beige ;
+    border-color: brown;
+   }
+   .answer-btn.correct {
+    background-color: green ;
+    border-color:greenyellow ;
+    color: white;
+   }
+   .answer-btn.incorrect {
+    background-color: red ;
+    border-color: black ;
+    color: black;
+   }
+
+
+
+   /* PROGRESS BAR */
+   .progress-bar {
+    height: 10px;
+    background-color: beige;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   }
+   .progress {
+    background-color:rgb(223, 94, 24);
+    height: 100%;
+    width: 20%;
+    transition: width 0.3s ease;
+   }
+
+
+
+   /* RESULT SCREEN */
+   #result-screen h1 {
+    color: rgb(223, 94, 24);
+    margin-bottom: 30px;
+   }
+   .result-info {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+   }
+   .result-info p {
+    font-size: smaller;
+    color: gray;
+    margin-bottom: 20px;
+   }
+   .result-message {
+    color: rgb(222, 94, 24);
+    font-size: larger;
+    margin: 20px;
+    font-weight: bold;
+   }
+
+
+   /* BUTTONS */
+   button {
+    background-color:  rgb(223, 94, 24);
+    color: white;
+    border-radius: 8px;
+    padding: 15px 30px;
+    border: none;
+    font-size: medium;
+    transition: all 0.3s ease;
+    cursor: pointer;
+   }
+   button:hover{
+    background-color: brown;
+    color: white;
+    border-radius: 8px;
+    padding: 15px 30px;
+    border: none;
+   }
+
+
+
+   /* RESPONSIVE DESIGN */
+   @media (max-width: 500px) {
+    /* when we hit 500px and below, implement the style */
+   }
+   .screen {
+    padding: 1rem;
+   }
+   #start-screen h1 {
+    font-size: 27px ;
+   }
+   #question-text {
+    font-size: 1rem;
+   }
+   .answer-btn {
+    padding: 15px ;
+   }
+   button {
+    padding:12px 26px ;
+    font-size: small;
+   }
